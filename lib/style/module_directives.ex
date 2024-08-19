@@ -216,7 +216,6 @@ defmodule Styler.Style.ModuleDirectives do
         {:dealiases, d} -> {:dealiases, d}
         {k, v} -> {k, Enum.reverse(v)}
       end)
-      |> lift_aliases()
 
     # Not happy with it, but this does the work to move module attribute assignments above the module or quote or whatever
     # Given that it'll only be run once and not again, i'm okay with it being inefficient
